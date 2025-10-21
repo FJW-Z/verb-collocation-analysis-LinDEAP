@@ -62,3 +62,18 @@ cd verb-collocation-analysis-LinDEAP
 若使用 Jupyter Notebook：打开 notebooks/Verb_Collocation_Analysis.ipynb，按单元格顺序运行（含详细代码注释）。
 3. 查看结果：
 提取的动词搭配列表会保存至 output/ 文件夹，按 “动词 - 搭配类型” 命名（如 suggest_proposition_nouns.txt）。
+
+## 论文关联说明
+本代码直接支撑论文《从 FrameNet 视角识别 LinDEAP 语料库中的动词搭配模式》的核心研究环节：
+论文 “4.2 论证依据（SUPPORT）分析”：代码提取的名词短语搭配为 “表 1 研究结果类搭配” 提供数据；
+论文 “4.3 论证命题（PROPOSITION）分析”：代码统计的从句 / 名词短语分布，对应 “表 3 命题句法模式” 的量化结果；
+可通过修改 keyverb 参数（如 suggest→indicate），复现论文中 5 个核心动词的搭配分析过程。
+
+## 版本更新
+2024.10：完成核心功能开发，支持 show/suggest/indicate/argue/demonstrate 5 个动词的搭配提取；
+2024.09：初始版本，实现基础的名词短语筛选与语料读取功能。
+
+备注
+若需处理更多论证类动词，可修改代码中的 keyverb 参数（如 proposition_noun(linel, 'indicate')）；
+建议结合 AntConc 的 “关键词索引” 功能使用，先通过 AntConc 筛选高频动词，再用本代码精准提取搭配成分，提升研究效率。
+For academic reference, please cite the thesis: "Identifying Verb Collocational Patterns in LinDEAP Corpus from the Perspective of FrameNet" (2024).
