@@ -73,7 +73,7 @@ cd verb-collocation-analysis-LinDEAP
 2024.10：完成核心功能开发，支持 show/suggest/indicate/argue/demonstrate 5 个动词的搭配提取；
 2024.09：初始版本，实现基础的名词短语筛选与语料读取功能。
 
-备注
+## 备注
 若需处理更多论证类动词，可修改代码中的 keyverb 参数（如 proposition_noun(linel, 'indicate')）；
-建议结合 AntConc 的 “关键词索引” 功能使用，先通过 AntConc 筛选高频动词，再用本代码精准提取搭配成分，提升研究效率。
+建议结合 AntConc 的 “关键词索引” 功能使用，先通过 AntConc 筛选高频动词，再用本代码精准提取搭配成分，提升研究效率；
 For academic reference, please cite the thesis: "Identifying Verb Collocational Patterns in LinDEAP Corpus from the Perspective of FrameNet" (2024).
